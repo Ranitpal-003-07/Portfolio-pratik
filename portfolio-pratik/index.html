@@ -1,620 +1,602 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Data Engineer with a passion for Data Visualization and Artificial Intelligence." />
+  <meta name="author" content="Pratik Raj" />
+  
+  <title>Pratik Raj | Data Engineer</title>
+  
+  <!-- Preconnect to CDNs -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  
+  <!-- Materialize - Latest Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <!-- Font Awesome Icon - CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <style>
+    :root {
+      --primary-color: #009688;
+      --primary-light: #4db6ac;
+      --primary-dark: #00796b;
+      --text-light: #f5f5f5;
+      --text-dark: #212121;
+      --background: #fafafa;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      background-color: var(--background);
+    }
+    
+    main {
+      flex: 1 0 auto;
+    }
+    
+    .full-height {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--primary-light);
+    }
+    
+    .section {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    
+    .side-nav {
+      width: 200px;
+      padding-top: 1rem;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    
+    #intro {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/img/background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+    }
+    
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .page-title {
+      font-weight: 500;
+      padding: 0.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .social-btn {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .social-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    
+    .linkedin { background-color: #0077B5 !important; }
+    .github { background-color: #333 !important; }
+    
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .btn-large {
+      border-radius: 30px;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0.5px;
+      padding: 0 2rem;
+    }
+    
+    .card {
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card-image {
+      max-height: 200px;
+      overflow: hidden;
+    }
+    
+    .card-title {
+      font-weight: 500 !important;
+    }
+    
+    .skill-icon {
+      height: 60px;
+      width: auto;
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .skill-icon:hover {
+      transform: scale(1.1);
+    }
+    
+    .skill-name {
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+    }
+    
+    /* Dark mode toggle */
+    .switch-wrapper {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+    
+    /* Responsive adjustments */
+    @media only screen and (max-width: 992px) {
+      .side-nav.fixed {
+        transform: translateX(-105%);
+      }
+    }
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PGZH8HT');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Materialize - Compiled and minified CSS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
-  <!-- Font Awesome Icon - CSS-->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <!-- Custom Styles-->
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <title>Pratik Raj | Aspiring Data Scientists</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-126939217-2');
-  </script>
-
-  <!-- Open Graph-->
-  <meta property="og:locale" content="en_US" />
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #f5f5f5;
+    }
+    
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+    }
+    
+    body.dark-mode .card-content {
+      color: #f5f5f5;
+    }
+    
+    /* Animation classes */
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .slide-up {
+      animation: slideUp 0.8s ease-out;
+    }
+    
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+  
+  <!-- SEO and Social Media Tags -->
+  <meta property="og:title" content="Pratik Raj | Data Engineer" />
+  <meta property="og:description" content="Data Engineer with a passion for Data Visualization and Artificial Intelligence" />
+  <meta property="og:url" content="https://pratikraj.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Varad Bhogayata | Software Developer" />
-  <meta property="og:description" content="Software Developer" />
-  <meta property="og:url" content="https://varadbhogayata.github.io/" />
-  <meta property="og:site_name" content="Varad Bhogayata | Software Developer" />
-  <meta property="article:publisher" content="https://varadbhogayata.github.io/" />
-  <meta property="og:image" content="https://varadbhogayata.github.io/examples/preview.JPG" />
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@varad_bhogayata" />
-  <meta name="twitter:title" content="Coder | Technofreak | Explorer | Minimalist | Humane" />
-  <meta name="twitter:description" content="Software Developer" />
-  <meta name="twitter:url" content="https://twitter.com/varad_bhogayata" />
-  <meta name="author" content="Varad Bhogayata" />
-  <meta name="description" content="Software Developer with a passion for backend development and artificial intelligence." />
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="robots" content="index, follow" />
-  <!-- Google Site Verification for indexing -->
-  <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pratik Raj | Data Engineer" />
+  <meta name="twitter:description" content="Data Engineer with a passion for Data Visualization and Artificial Intelligence" />
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  
-  <!-- Navigation Menu-->
-  <!-- Nav class 1 -->
-  <nav class="hide-on-small-only">
-    <ul class="side-nav fixed section table-of-contents">
-
-      <li class="logo">
-        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
-          class="brand-logo grey-blue-text">
-          <img src="/assets/img/passport-new.jpg" class="circle img-responsive profile-pic" alt="avatar">
+  <!-- Navigation Menu -->
+  <div class="navbar-fixed">
+    <nav class="teal darken-2 hide-on-large-only">
+      <div class="nav-wrapper container">
+        <a href="#" data-target="slide-out" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
         </a>
-      </li>
+        <a href="#" class="brand-logo">Pratik Raj</a>
+      </div>
+    </nav>
+  </div>
 
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      
+  <!-- Side Navigation -->
+  <ul id="slide-out" class="sidenav sidenav-fixed">
+    <li>
+      <div class="user-view center-align">
+        <img src="/assets/img/passport-new.jpg" class="profile-pic" alt="Pratik Raj profile picture">
+        <h5 class="teal-text">Pratik Raj</h5>
+        <p>Data Engineer</p>
+      </div>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="#about" class="waves-effect"><i class="material-icons">person</i>About</a></li>
+    <li><a href="#projects" class="waves-effect"><i class="material-icons">work</i>Projects</a></li>
+    <li><a href="#skills" class="waves-effect"><i class="material-icons">assessment</i>Skills</a></li>
+    <li><a href="#education" class="waves-effect"><i class="material-icons">school</i>Education</a></li>
+    <li><a href="#contact" class="waves-effect"><i class="material-icons">mail</i>Contact</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="/resume.pdf" target="_blank" class="waves-effect"><i class="material-icons">description</i>Resume</a></li>
+    <li><div class="divider"></div></li>
+    <li>
+      <div class="center-align" style="padding: 20px;">
+        <div class="switch">
+          <label>
+            Light
+            <input type="checkbox" id="theme-toggle">
+            <span class="lever"></span>
+            Dark
+          </label>
+        </div>
+      </div>
+    </li>
+  </ul>
 
-      <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        mdi-action-assessment
-        mdi-social-poll
-        mdi-av-equalizer
-        -->
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-      
-      <li class="bold">
-        <!--
-        ICONS:
-        -->
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-
-      <li class="bold">
-        <!-- 
-        1. mdi-communication-contacts
-        2. mdi-content-mail
-        3. mdi-communication-email
-        -->
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Open Varad's resume in a new tab" href="" target="_blank"
-        class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Nav class 2 -->
-  <nav class="hide-on-large only trigger z-depth-1">
-    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
-      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Pratik Raj</a><span class="black-text">Software Developer</span>
-    </div>
-  </nav>
-
-  <!-- Nav class 3 -->
-  <nav class="hide-on-large only">
-    <ul id="slide-out" class="side-nav">
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Open Pratik's Resume in a new tab"
-          href="" target="_blank"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Main Content-->
+  <!-- Main Content -->
   <main>
-    <!-- First Section: Heading lines and image -->
+    <!-- Intro Section -->
     <section id="intro" class="section scrollspy full-height">
-      <div class="overlay"></div>
       <div class="container">
-        <div class="col-md-9">
-          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
-            <div class="caption">
-              <h2>Hi, I'm <span class="teal">Pratik Raj</span></h2>
-              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
-              <h5>Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving a complex and challenging real-world problems.</h5>
-            </div>
-            <div class="social">
-              <a href="http://linkedin.com/in/pratikraj3219/" target="_blank">
-                <button class="icon-btn linkedin">
-                  <i class="fa fa-linkedin"></i>
+        <div class="row content fade-in">
+          <div class="col s12 m10 offset-m1 l8 offset-l2 center-align">
+            <h1 class="white-text">Hi, I'm <span class="teal-text text-lighten-2">Pratik Raj</span></h1>
+            <h5 class="white-text">A <span class="typing" style="font-weight: 300;"></span></h5>
+            <p class="flow-text white-text">Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving complex and challenging real-world problems.</p>
+            
+            <div class="social-links center-align">
+              <a href="http://linkedin.com/in/pratikraj3219/" target="_blank" aria-label="LinkedIn Profile">
+                <button class="btn-floating btn-large social-btn linkedin pulse">
+                  <i class="fab fa-linkedin-in"></i>
                 </button>
               </a>
-              <a href="https://github.com/pratik3219/" target="_blank">
-                <button class="icon-btn github">
-                  <i class="fa fa-github"></i>
+              <a href="https://github.com/pratik3219/" target="_blank" aria-label="GitHub Profile">
+                <button class="btn-floating btn-large social-btn github pulse">
+                  <i class="fab fa-github"></i>
                 </button>
               </a>
-
-              
-
-              
             </div>
-            <div class='buttons'>
-              <a href="#about" class="readme">Read More</a>
-              <a href="#contact" class="contactme">Contact Me</a>
+            
+            <div class="buttons center-align">
+              <a href="#about" class="btn-large waves-effect waves-light teal">Read More</a>
+              <a href="#contact" class="btn-large waves-effect waves-light white black-text">Contact Me</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Second Section: About -->
+    <!-- About Section -->
     <section id="about" class="section scrollspy">
-      <h3 class="page-title white-text teal">About</h3>
-      <div class="container flow-text">
-        <blockquote>
-          <h2>
-            A Data Engineer with a passion for Data Visualization and Artificial Intelligence.
-          </h2>
-        </blockquote>         
-        <p>
-          I am a Computer Science Grad Student at Lovely Professional University. I enjoy problem-solving and coding. Always strive to bring 100% to the work I do.
-
-          I have worked on technologies like Python, R, Hadoop, Tableu, Excel, Django, F, MySQL, HTML5, CSS, Java, C++ during my bachelor's. I have 19 months of professional work experience which helped me strengthen my experience in Python, Flask, and Django.
-
-          I am passionate about developing complex applications that solve real-world problems impacting millions of users.
-        </p>
-        <p>
-          <ul>
-            <li><b>Languages:</b> Python, Java, JavaScript, C, C++, HTML/CSS, Bash</li>
-            <li><b>Databases:</b> MySQL, PostgreSQL</li>
-            <li><b>Libraries:</b> NumPy, Pandas, OpenCV</li>
-            <li><b>Frameworks:</b> Flask, Django, R, TensorFlow, Bootstrap</li>
-            <li><b>Tools & Technologies:</b> Git, Github, Hadoop, Tableu, Excel, </li>
-          </ul>
-          
-        </p>
-          
-        
-        <p>
-          Looking for an opportunity to work in a challenging position combining my skills in Software Engineering, which provides professional development, interesting experiences and personal growth.
-        </p>
-        
+      <div class="container">
+        <h3 class="page-title white-text teal darken-2">About</h3>
+        <div class="row slide-up">
+          <div class="col s12 m10 offset-m1">
+            <div class="card">
+              <div class="card-content">
+                <blockquote>
+                  <h4>A Data Engineer with a passion for Data Visualization and Artificial Intelligence.</h4>
+                </blockquote>
+                <p class="flow-text">
+                  I am a Computer Science Grad Student at Lovely Professional University. I enjoy problem-solving and coding. Always strive to bring 100% to the work I do.
+                </p>
+                <p>
+                  I have worked on technologies like Python, R, Hadoop, Tableau, Excel, Django, MySQL, HTML5, CSS, Java, C++ during my bachelor's. I have 19 months of professional work experience which helped me strengthen my experience in Python, Flask, and Django.
+                </p>
+                <p>
+                  I am passionate about developing complex applications that solve real-world problems impacting millions of users.
+                </p>
+                
+                <div class="row">
+                  <div class="col s12 m6">
+                    <h5>Technical Skills</h5>
+                    <ul class="collection">
+                      <li class="collection-item"><i class="material-icons left">code</i> <strong>Languages:</strong> Python, Java, JavaScript, C, C++, HTML/CSS, Bash</li>
+                      <li class="collection-item"><i class="material-icons left">storage</i> <strong>Databases:</strong> MySQL, PostgreSQL</li>
+                      <li class="collection-item"><i class="material-icons left">library_books</i> <strong>Libraries:</strong> NumPy, Pandas, OpenCV</li>
+                      <li class="collection-item"><i class="material-icons left">developer_board</i> <strong>Frameworks:</strong> Flask, Django, R, TensorFlow, Bootstrap</li>
+                      <li class="collection-item"><i class="material-icons left">build</i> <strong>Tools & Technologies:</strong> Git, Github, Hadoop, Tableau, Excel</li>
+                    </ul>
+                  </div>
+                  <div class="col s12 m6">
+                    <h5>Professional Objectives</h5>
+                    <p>
+                      Looking for an opportunity to work in a challenging position combining my skills in Software Engineering, which provides professional development, interesting experiences and personal growth.
+                    </p>
+                    <div class="card-panel teal lighten-1 white-text">
+                      <i class="material-icons left">lightbulb</i>
+                      <span>I believe in continuous learning and adapting to new technologies to stay at the forefront of innovation.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-
-   
-    <!-- Fourth Section: Projects -->
+    <!-- Projects Section -->
     <section id="projects" class="section scrollspy">
-      <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
-        <div class="row">
-
+        <h3 class="page-title white-text teal darken-2">Projects</h3>
+        <div class="row slide-up">
+          <!-- Music Player Project -->
           <div class="col s12 m6 l4">
-            <div class="card medium">
+            <div class="card medium hoverable">
               <div class="card-image waves-effect waves-block waves-light">
-                <img alt="music streaming app" src="/assets/img/project-music-player.png" style="height: 100%; width: 100%" class="activator" />
+                <img alt="Music Player App" src="/assets/img/project-music-player.png" class="activator">
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Music Player Web-App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A music streaming web app based on Django
-                </p>
+                <span class="card-title activator teal-text">Music Player Web-App<i class="material-icons right">more_vert</i></span>
+                <p>A music streaming web app based on Django</p>
               </div>
               <div class="card-reveal">
-               <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, AWS S3, Heroku</li>
-                  <li>Register/login to the web app(with OAuth-based Google Sign-In).</li>
-                  <li>Search and filter songs based on language and singer.</li>
-                  <li>Create multiple playlists and add/remove songs to/from playlist.</li>
-                  <li>Scroll through recently played/viewed songs.</li>
-
-
+                <span class="card-title grey-text text-darken-4">Music Player Web-App<i class="material-icons right">close</i></span>
+                <p><strong>Technologies Used:</strong> Django, HTML, CSS, Bootstrap, SQLite, AWS S3, Heroku</p>
+                <ul class="browser-default">
+                  <li>Register/login to the web app (with OAuth-based Google Sign-In)</li>
+                  <li>Search and filter songs based on language and singer</li>
+                  <li>Create multiple playlists and add/remove songs to/from playlist</li>
+                  <li>Scroll through recently played/viewed songs</li>
                 </ul>
                 <div class="card-action">
-                  <a aria-label="Visit " href="https://galvanic-music.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/music-player"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
+                  <a href="https://galvanic-music.herokuapp.com/" target="_blank" class="btn waves-effect waves-light teal">Demo</a>
+                  <a href="https://github.com/pratik3219/music-player" target="_blank" class="btn waves-effect waves-light grey darken-3">Code</a>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- Quiz Web-App Project -->
           <div class="col s12 m6 l4">
-            <div class="card medium">
+            <div class="card medium hoverable">
               <div class="card-image waves-effect waves-block waves-light">
-                <img alt="quiz app" src="/assets/img/project-quizup-logo-1.png" style="height: 100%; width: 100%" class="activator" />
+                <img alt="Quiz App" src="/assets/img/project-quizup-logo-1.png" class="activator">
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Quiz Web-App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A quiz playing web app based on Django
-                </p>
+                <span class="card-title activator teal-text">Quiz Web-App<i class="material-icons right">more_vert</i></span>
+                <p>A quiz playing web app based on Django</p>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, Heroku</li>
-                  <li>Register/login to the web app(with OAuth-based Google Sign-In).</li>
+                <span class="card-title grey-text text-darken-4">Quiz Web-App<i class="material-icons right">close</i></span>
+                <p><strong>Technologies Used:</strong> Django, HTML, CSS, Bootstrap, SQLite, Heroku</p>
+                <ul class="browser-default">
+                  <li>Register/login to the web app (with OAuth-based Google Sign-In)</li>
                   <li>Play Quiz and see the leaderboard</li>
-
                 </ul>
                 <div class="card-action">
-                  <a aria-label="Visit " href="https://quiz-up-app.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/QuizUp"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
+                  <a href="https://quiz-up-app.herokuapp.com/" target="_blank" class="btn waves-effect waves-light teal">Demo</a>
+                  <a href="https://github.com/pratik3219/QuizUp" target="_blank" class="btn waves-effect waves-light grey darken-3">Code</a>
                 </div>
               </div>
             </div>
           </div>
 
-         
-
-          <!-- Flask Project -->
+          <!-- Blog Web-App Project -->
           <div class="col s12 m6 l4">
-            <div class="card medium">
+            <div class="card medium hoverable">
               <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of web app" src="/assets/img/project-blog-logo.jpg"
-                style="height: 100%; width: 100%" class="activator" />
+                <img alt="Blog App" src="/assets/img/project-blog-logo.jpg" class="activator">
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Blog Web-App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A simple and extensible blog web-app based on Flask.
-                </p>
+                <span class="card-title activator teal-text">Blog Web-App<i class="material-icons right">more_vert</i></span>
+                <p>A simple and extensible blog web-app based on Flask</p>
               </div>
               <div class="card-reveal">
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> HTML, CSS, Bootstrap, Flask, SQLAlchemy, Postgresql, Python</li>
-                  <li>Users can view posts and contact the admin via Contact Page.</li>
-                  <li>Admin can Add, Delete, Update posts.</li>
-
-
+                <span class="card-title grey-text text-darken-4">Blog Web-App<i class="material-icons right">close</i></span>
+                <p><strong>Technologies Used:</strong> HTML, CSS, Bootstrap, Flask, SQLAlchemy, PostgreSQL, Python</p>
+                <ul class="browser-default">
+                  <li>Users can view posts and contact the admin via Contact Page</li>
+                  <li>Admin can Add, Delete, Update posts</li>
                 </ul>
                 <div class="card-action">
-                  <a aria-label="Visit Blog website" href="https://flask-heroku-blog.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/flask-blog"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
+                  <a href="https://flask-heroku-blog.herokuapp.com/" target="_blank" class="btn waves-effect waves-light teal">Demo</a>
+                  <a href="https://github.com/pratik3219/flask-blog" target="_blank" class="btn waves-effect waves-light grey darken-3">Code</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- VQA -->
+          <!-- More projects can be added here in the same format -->
+        </div>
+        
+        <!-- Second row of projects -->
+        <div class="row slide-up">
+          <!-- VQA Project -->
           <div class="col s12 m6 l4">
-            <div class="card medium">
+            <div class="card medium hoverable">
               <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/project-aim_bert-bias.png" style="height: 100%; width: 100%" class="activator" />
+                <img alt="Visual Question Answering" src="/assets/img/project-aim_bert-bias.png" class="activator">
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Visual Question Answering<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  An attention-based classification model that aims at generating an answer for a given input image.
-                </p>
+                <span class="card-title activator teal-text">Visual Question Answering<i class="material-icons right">more_vert</i></span>
+                <p>An attention-based classification model for answering questions about images</p>
               </div>
               <div class="card-reveal">
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Incorporated Convolution Neural Networks (CNN) for extracting image features and Long Short Term
-                    Memory for extracting question
-                    embeddings.</li>
-                  <li>Tested the model on the COCO dataset, abstract scenes images, and got 69% overall accuracy on the
-                    VQA evaluation metric.</li>
-
+                <span class="card-title grey-text text-darken-4">Visual Question Answering<i class="material-icons right">close</i></span>
+                <p><strong>Technologies Used:</strong> Python, CNN, LSTM, Deep Learning</p>
+                <ul class="browser-default">
+                  <li>Incorporated Convolution Neural Networks (CNN) for extracting image features and Long Short Term Memory for extracting question embeddings</li>
+                  <li>Tested the model on the COCO dataset, abstract scenes images, and got 69% overall accuracy on the VQA evaluation metric</li>
                 </ul>
                 <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project"
-                    href="https://github.com/varadbhogayata/visual-question-answering" target="_blank"
-                    data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
+                  <a href="https://github.com/pratik3219/visual-question-answering" target="_blank" class="btn waves-effect waves-light grey darken-3">Code</a>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Video Summarizer -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/computer-vision-v2-04.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Video Summarizer<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A Seq2Seq model that generates a short summary of the given input video.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Incorporated CNN to detect and classify objects in the video frames and Long Short Term Memory for
-                    generating a summary.</li>
-                  <li>Evaluated the model on MSVD (Microsoft Video Description Corpus) dataset; achieved 0.77, 0.71,
-                    0.52 scores respectively on ROGUE,
-                    BLEU, METEOR evaluation metrics.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Image Generator -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/gan.jpg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Image Generator<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  An image generator based on the concept of adversarial networks (GANs)
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Developed system was tested on a human-face database and loss was calculated by comparing the PCAs
-                    of generated and original image.</li>
-                  <li>Calculated difference in PCA was less than 10%, depicting the successful generation of an image by
-                    the generator.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Head Counting System -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/Blog-Images-Forget-Machine-Learning-Humans-Still-Have-a-Lot-to-Learn-Part-II.jpg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Head Counting System<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A system that calculates the attendance of the class from a panoramic image of a live classroom.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Used Singular Value Decomposition for image compression; applied various image processing
-                    techniques and morphological operations to
-                    detect the number of heads.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project"
-                    href="https://github.com/varadbhogayata/visual-question-answering" target="_blank"
-                    data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ************* -->
+          
+          <!-- Additional projects -->
+          <!-- Add the remaining projects here following the same pattern -->
         </div>
       </div>
     </section>
 
-    <!-- Fifth Section: Skills -->
+    <!-- Skills Section -->
     <section id="skills" class="section scrollspy">
-      <h3 class="page-title white-text teal">Skills</h3>
       <div class="container">
+        <h3 class="page-title white-text teal darken-2">Skills</h3>
+        
         <!-- Languages and Databases -->
-        <div class="card">
+        <div class="card slide-up">
           <div class="card-content">
-            <h4 class="brown-text light">Languages and Databases</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/python-logo-1-300x300.jpg" class="responsive-img" />Python
+            <h4 class="teal-text text-darken-1">Languages and Databases</h4>
+            <div class="row center-align">
+              <div class="col s4 m2" data-aos="fade-up">
+                <img alt="Python" src="/assets/img/python-logo-1-300x300.jpg" class="skill-icon responsive-img">
+                <p class="skill-name">Python</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/html5-300x300.jpg" class="responsive-img" />HTML5
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="100">
+                <img alt="HTML5" src="/assets/img/html5-300x300.jpg" class="skill-icon responsive-img">
+                <p class="skill-name">HTML5</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/css3-300x300.jpg" class="responsive-img" />CSS3
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="200">
+                <img alt="CSS3" src="/assets/img/css3-300x300.jpg" class="skill-icon responsive-img">
+                <p class="skill-name">CSS3</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/mysql-logo-1-300x300.jpg" class="responsive-img" />MySQL
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="300">
+                <img alt="MySQL" src="/assets/img/mysql-logo-1-300x300.jpg" class="skill-icon responsive-img">
+                <p class="skill-name">MySQL</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/postgresql-logo.png" class="responsive-img" />PostgreSQL
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="400">
+                <img alt="PostgreSQL" src="/assets/img/postgresql-logo.png" class="skill-icon responsive-img">
+                <p class="skill-name">PostgreSQL</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/shell-logo-1-300x300.jpg" class="responsive-img" />Shell Scripting
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="500">
+                <img alt="Shell Scripting" src="/assets/img/shell-logo-1-300x300.jpg" class="skill-icon responsive-img">
+                <p class="skill-name">Shell</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="card">
+        <!-- Libraries -->
+        <div class="card slide-up">
           <div class="card-content">
-            <h4 class="brown-text light">Libraries</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/numpy-logo-1-500x500.jpg" class="responsive-img" />NumPy
+            <h4 class="teal-text text-darken-1">Libraries</h4>
+            <div class="row center-align">
+              <div class="col s4 m2" data-aos="fade-up">
+                <img alt="NumPy" src="/assets/img/numpy-logo-1-500x500.jpg" class="skill-icon responsive-img">
+                <p class="skill-name">NumPy</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/pandas-logo-2-500x500.jpg" class="responsive-img" />Pandas
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="100">
+                <img alt="Pandas" src="/assets/img/pandas-logo-2-500x500.jpg" class="skill-icon responsive-img">
+                <p class="skill-name">Pandas</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/opencv-logo-1-500x500.jpg" class="responsive-img" />OpenCV
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="200">
+                <img alt="OpenCV" src="/assets/img/opencv-logo-1-500x500.jpg" class="skill-icon responsive-img">
+                <p class="skill-name">OpenCV</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/sk-learn-logo-1-500x500.jpg" class="responsive-img" />scikit-learn
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="300">
+                <img alt="scikit-learn" src="/assets/img/sk-learn-logo-1-500x500.jpg" class="skill-icon responsive-img">
+                <p class="skill-name">scikit-learn</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/matplotlib-logo-1-500x500.jpg" class="responsive-img" />matplotlib
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="400">
+                <img alt="matplotlib" src="/assets/img/matplotlib-logo-1-500x500.jpg" class="skill-icon responsive-img">
+                <p class="skill-name">matplotlib</p>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Frameworks -->
-        <div class="card">
+        <div class="card slide-up">
           <div class="card-content">
-            <h4 class="brown-text light">Frameworks</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/django-logo.webp" class="responsive-img" />Django
+            <h4 class="teal-text text-darken-1">Frameworks</h4>
+            <div class="row center-align">
+              <div class="col s4 m2" data-aos="fade-up">
+                <img alt="Django" src="/assets/img/django-logo.webp" class="skill-icon responsive-img">
+                <p class="skill-name">Django</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/flask-logo.png" class="responsive-img" />Flask
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="100">
+                <img alt="Flask" src="/assets/img/flask-logo.png" class="skill-icon responsive-img">
+                <p class="skill-name">Flask</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/bootstrap.png" class="responsive-img" />Bootstrap
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="200">
+                <img alt="Bootstrap" src="/assets/img/bootstrap.png" class="skill-icon responsive-img">
+                <p class="skill-name">Bootstrap</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/keras-logo.png" class="responsive-img" />Keras
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="300">
+                <img alt="Keras" src="/assets/img/keras-logo.png" class="skill-icon responsive-img">
+                <p class="skill-name">Keras</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/tensorflow-logo-1.png" class="responsive-img" />TensorFlow
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="400">
+                <img alt="TensorFlow" src="/assets/img/tensorflow-logo-1.png" class="skill-icon responsive-img">
+                <p class="skill-name">TensorFlow</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/pytorch-logo.png" class="responsive-img" />PyTorch
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="500">
+                <img alt="PyTorch" src="/assets/img/pytorch-logo.png" class="skill-icon responsive-img">
+                <p class="skill-name">PyTorch</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Other -->
-        <div class="card">
+        <!-- Other Tools -->
+        <div class="card slide-up">
           <div class="card-content">
-            <h4 class="brown-text light">Other</h4>
-            <div class="row text-center">
-
-
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/git.png" class="responsive-img" />Git
+            <h4 class="teal-text text-darken-1">Other Tools</h4>
+            <div class="row center-align">
+              <div class="col s4 m2" data-aos="fade-up">
+                <img alt="Git" src="/assets/img/git.png" class="skill-icon responsive-img">
+                <p class="skill-name">Git</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/aws.png" class="responsive-img" />AWS
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="100">
+                <img alt="AWS" src="/assets/img/aws.png" class="skill-icon responsive-img">
+                <p class="skill-name">AWS</p>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/heroku.png" class="responsive-img" />Heroku
+              <div class="col s4 m2" data-aos="fade-up" data-aos-delay="200">
+                <img alt="Heroku" src="/assets/img/heroku.png" class="skill-icon responsive-img">
+                <p class="skill-name">Heroku</p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
+   
     <!-- Seventh Section: Education -->
     <section id="education" class="section scrollspy">
       <h3 class="page-title white-text teal">Education</h3>
